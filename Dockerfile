@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM debian:stable-slim
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -34,5 +34,7 @@ RUN /opt/android-sdk-linux/cmdline-tools/tools/bin/sdkmanager "build-tools;30.0.
 RUN /opt/android-sdk-linux/cmdline-tools/tools/bin/sdkmanager "platform-tools"
 RUN /opt/android-sdk-linux/cmdline-tools/tools/bin/sdkmanager "platforms;android-29"
 RUN /opt/android-sdk-linux/cmdline-tools/tools/bin/sdkmanager "system-images;android-29;google_apis;x86_64"
+RUN /opt/android-sdk-linux/cmdline-tools/tools/bin/sdkmanager "ndk;22.1.7171670" 
+RUN /opt/android-sdk-linux/cmdline-tools/tools/bin/sdkmanager "cmake;3.18.1" 
 
 CMD /opt/tools/entrypoint.sh built-in
