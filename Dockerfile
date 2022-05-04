@@ -2,7 +2,7 @@ FROM debian:stable-slim
 
 ENV DEBIAN_FRONTEND noninteractive
 
-ENV ANDROID_HOME      /opt/android-sdk-linux
+ENV ANDROID_HOME      /opt/android-sdk
 ENV ANDROID_SDK_HOME  ${ANDROID_HOME}
 ENV ANDROID_SDK_ROOT  ${ANDROID_HOME}
 ENV ANDROID_SDK       ${ANDROID_HOME}
@@ -25,7 +25,7 @@ RUN groupadd android && useradd -d /opt/android-sdk-linux -g android android
 COPY tools /opt/tools
 COPY licenses /opt/licenses
 
-WORKDIR /opt/android-sdk-linux
+WORKDIR /opt/android-sdk
 
 RUN /opt/tools/entrypoint.sh built-in
 
