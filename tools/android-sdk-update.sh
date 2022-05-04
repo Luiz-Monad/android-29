@@ -62,4 +62,4 @@ echo "Updating SDK"
 update_sdk
 
 echo "Accepting Licenses"
-android-accept-licenses.sh "sdkmanager --licenses --verbose"
+android-accept-licenses.sh "sdkmanager --licenses --verbose" 2>&1 > /dev/null
