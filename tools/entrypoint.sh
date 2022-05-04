@@ -16,9 +16,5 @@ else
     su_mt_user /opt/tools/android-sdk-update.sh ${1}
 fi
 
-
-
-
-
-
+echo "[done] android-sdk-update"
 
