@@ -25,5 +25,5 @@ jobs:
         user_name: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
         # version is all major: debian.sdk.ndk
-        image_version: 'sdk29-ndk22.1'
+        image_version: '29'
         docker_file: '.'
