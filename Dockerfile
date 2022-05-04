@@ -29,12 +29,12 @@ WORKDIR /opt/android-sdk
 
 RUN /opt/tools/entrypoint.sh built-in
 
-RUN /opt/android-sdk-linux/cmdline-tools/tools/bin/sdkmanager "cmdline-tools;latest"
-RUN /opt/android-sdk-linux/cmdline-tools/tools/bin/sdkmanager "build-tools;30.0.2"
-RUN /opt/android-sdk-linux/cmdline-tools/tools/bin/sdkmanager "platform-tools"
-RUN /opt/android-sdk-linux/cmdline-tools/tools/bin/sdkmanager "platforms;android-29"
-RUN /opt/android-sdk-linux/cmdline-tools/tools/bin/sdkmanager "system-images;android-29;google_apis;x86_64"
-RUN /opt/android-sdk-linux/cmdline-tools/tools/bin/sdkmanager "ndk;22.1.7171670" 
-RUN /opt/android-sdk-linux/cmdline-tools/tools/bin/sdkmanager "cmake;3.18.1" 
+RUN /opt/android-sdk/cmdline-tools/tools/bin/sdkmanager "cmdline-tools;latest"
+RUN /opt/android-sdk/cmdline-tools/tools/bin/sdkmanager "platform-tools"
+RUN /opt/android-sdk/cmdline-tools/tools/bin/sdkmanager "platforms;android-29"
+RUN /opt/android-sdk/cmdline-tools/tools/bin/sdkmanager "system-images;android-29;google_apis;x86_64"
+RUN /opt/android-sdk/cmdline-tools/tools/bin/sdkmanager "ndk;22.1.7171670" 
+RUN /opt/android-sdk/cmdline-tools/tools/bin/sdkmanager "cmake;3.18.1" 
+RUN /opt/android-sdk/cmdline-tools/tools/bin/sdkmanager "build-tools;30.0.2"
 
-CMD /opt/tools/entrypoint.sh built-in
+CMD /opt/android-sdk/cmdline-tools/tools/bin/sdkmanager --list
