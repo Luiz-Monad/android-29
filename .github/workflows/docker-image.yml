@@ -10,6 +10,7 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
+    environment: DOCKERHUB
 
     steps:
     - name: Git Checkout Code
@@ -22,7 +23,7 @@ jobs:
       with:
         registry_url: 'docker.io'
         repository_name: 'debian-android-sdk-ndk'
-        user_name: '${{ secrets.DOCKERHUB_USERNAME }}'
-        password: '${{ secrets.DOCKERHUB_TOKEN }}'
+        user_name: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
         image_version: '29-22.1.7171670'
         docker_file: '.'
