@@ -21,9 +21,8 @@ jobs:
       uses: Abhishek-070/Dockerhub-Build-Push@67adb9a9055400bd6366b96b5b53f44385ab2743
       with:
         registry_url: 'docker.io'
-        repository_name: 'debian-android-sdk-ndk'
+        repository_name: 'luizfelipestangarlin/debian-android-sdk-ndk'
         user_name: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
-        # version is all major: debian.sdk.ndk
-        image_version: '29'
+        image_version: 'sdk29-ndk22.1'
         docker_file: '.'
